@@ -1,5 +1,5 @@
 {% set name = "fints" %}
-{% set version = "3.0.1" %}
+{% set version = "3.1.0" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fints-{{ version }}.tar.gz
-  sha256: d8a8920fb324a6a4cad2edc0a1a88a7a80b1072b5dc76af13f853ad8cbf80be7
+  sha256: 426f6af1a79dce75ef9d475da926c8fc407c1bb3da13acf9fb52f5f0449b58d8
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -40,7 +40,7 @@ about:
   license: LGPL-3.0-or-later
   license_family: GPL
   license_file: LICENSE.txt
-  summary: 'FinTS client library for Python'
+  summary: FinTS client library for Python
   description: |
     Many operations in FinTS will require a form of two-step
     authentication, called TANs. TANs are mostly required for operations
