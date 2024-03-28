@@ -25,6 +25,7 @@ requirements:
     - python >=3.6
     - requests
     - sepaxml ==2.1.0
+    - enum-tools
 
 test:
   imports:
