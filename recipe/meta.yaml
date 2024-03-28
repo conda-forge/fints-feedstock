@@ -1,5 +1,5 @@
 {% set name = "fints" %}
-{% set version = "4.0.0" %}
+{% set version = "4.1.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fints-{{ version }}.tar.gz
-  sha256: 6ec610362283e02ddf30ca60635b73895f4580f8089aec8285bed4d51851f1e1
+  sha256: a3701422c7c145af3201a98ceeb752fb18951c323bab7edbb724b8a2874fdf59
 
 build:
   number: 0
@@ -25,6 +25,7 @@ requirements:
     - python >=3.6
     - requests
     - sepaxml ==2.1.0
+    - enum_tools >=0.9.0,<0.10.0
 
 test:
   imports:
