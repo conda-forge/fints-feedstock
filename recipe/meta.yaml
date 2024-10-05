@@ -19,7 +19,6 @@ requirements:
     - python >=3.6
     - pip
   run:
-    - mt-940
     - python >=3.6
     - bleach
     - mt940
