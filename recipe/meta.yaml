@@ -1,5 +1,5 @@
 {% set name = "fints" %}
-{% set version = "4.1.1" %}
+{% set version = "4.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fints-{{ version }}.tar.gz
-  sha256: 9d96974cebe1807bbf2d16e2f3e9f96291a824525a83ee1302cfb52838697b0a
+  sha256: 3f41a8fdbeb19861cad237dbb120f565a78a1758d7cbefe180f69f3b804f3351
 
 build:
   noarch: python
@@ -20,6 +20,7 @@ requirements:
     - setuptools
     - pip
   run:
+    - mt-940
     - python >=3.6
     - bleach
     - mt940
