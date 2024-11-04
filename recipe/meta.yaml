@@ -1,13 +1,13 @@
 {% set name = "fints" %}
-{% set version = "4.2.0" %}
+{% set version = "4.2.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fints-{{ version }}.tar.gz
-  sha256: 3f41a8fdbeb19861cad237dbb120f565a78a1758d7cbefe180f69f3b804f3351
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fints-{{ version }}.tar.gz
+  sha256: 86008c2c817c498b5da82019b0653d03fdd5ee936926436e41529af8576c4463
 
 build:
   noarch: python
