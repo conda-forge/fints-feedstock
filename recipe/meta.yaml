@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fints-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fints-{{ version }}.tar.gz
   sha256: 86008c2c817c498b5da82019b0653d03fdd5ee936926436e41529af8576c4463
 
 build:
@@ -20,7 +20,6 @@ requirements:
     - setuptools
     - pip
   run:
-    - mt-940
     - python >=3.6
     - bleach
     - mt940
