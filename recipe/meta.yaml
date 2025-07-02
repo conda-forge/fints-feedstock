@@ -20,7 +20,6 @@ requirements:
     - setuptools
     - pip
   run:
-    - mt-940
     - python >={{ python_min }}
     - bleach
     - mt940
