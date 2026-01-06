@@ -1,5 +1,5 @@
 {% set name = "fints" %}
-{% set version = "4.2.4" %}
+{% set version = "5.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fints-{{ version }}.tar.gz
-  sha256: 9ce2adc84a34d61fca89d695aafffd7b07f537c4c16015139a29c3706cc36591
+  sha256: d418a8d810522ab6335d03819710298902f258a146eea7acd3ad376620ae2416
 
 build:
   noarch: python
@@ -20,11 +20,14 @@ requirements:
     - setuptools
     - pip
   run:
+    - enum-tools >=0.12.0,<0.13.dev0
+    - lxml >=6.0.2,<6.1.dev0
+    - mt-940
     - python >={{ python_min }}
     - bleach
     - mt940
     - requests
-    - sepaxml >=2.1,<3.dev0
+    - sepaxml >=2.7,<3.dev0
     - enum_tools >=0.12.0,<0.13.dev0
 
 test:
