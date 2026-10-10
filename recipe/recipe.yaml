@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: fints
-  version: "4.2.4"
+  version: 5.0.1
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/fints-${{ version }}.tar.gz
-  sha256: 9ce2adc84a34d61fca89d695aafffd7b07f537c4c16015139a29c3706cc36591
+  sha256: 2799e447c7940152ace67bd8984e17deec31cf4461e46f90ad6b12271a64b6ff
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -25,11 +25,11 @@ requirements:
   run:
     - python >=${{ python_min }}
     - bleach
-    - mt940
     - requests
-    - sepaxml >=2.1,<3.dev0
+    - sepaxml >=2.7,<3.dev0
     - enum_tools >=0.12.0,<0.13.dev0
-
+    - lxml >=6.0.2,<7
+    - mt940
 tests:
   - python:
       imports:
@@ -37,7 +37,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}
-        - "*"
+        - '*'
 
 about:
   license: LGPL-3.0-or-later
